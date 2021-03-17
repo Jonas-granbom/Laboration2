@@ -10,7 +10,7 @@ class CalculatorTest {
     void addMultipleNumbersTestMethod() {
         Calculator calculator = new Calculator();
 
-        assertEquals(1 + 2 + 2 + 4, calculator.add("1, 2, 2, 4"));
+        assertEquals(8, calculator.add("1, 2\n 2\n 4"));
 
     }
 

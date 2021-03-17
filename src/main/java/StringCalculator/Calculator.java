@@ -5,7 +5,12 @@ public class Calculator {
 
     int add(String numbers){
         int returnVal = 0;
+
+
+        numbers = numbers.replace("\n", ",");
         String[] numbersArray = numbers.split(",");
+
+
 
 
         for (String number : numbersArray) {
