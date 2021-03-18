@@ -10,7 +10,7 @@ class CalculatorTest {
     void addMultipleNumbersTestMethod() {
         Calculator calculator = new Calculator();
 
-        assertEquals(8, calculator.add("1, 2\n 2\n 4"));
+        assertEquals(9, calculator.add("1, 2\n 2\n 4"));
 
     }
 
@@ -22,4 +22,10 @@ class CalculatorTest {
 
     }
 
+    @Test
+    void specificDelimiterSeparatesNumbers() {
+        Calculator calc = new Calculator();
+
+        assertEquals(8 + 4 + 2, calc.add("//;n8     ;4   ;2"));
+    }
 }
