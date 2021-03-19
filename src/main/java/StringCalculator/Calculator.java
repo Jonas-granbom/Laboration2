@@ -9,16 +9,19 @@ public class Calculator {
         String delimiter = ",|\n";
         String noDelimiter = numbers;
         if (numbers.startsWith("//")) {
+
             int delimiterIndex = numbers.indexOf("//") + 2;
-            delimiter = numbers.substring(delimiterIndex, delimiterIndex + 1);
-            noDelimiter = numbers.substring(numbers.indexOf("n") + 1);
+            int delimiterIndexEnd = numbers.indexOf("\n");
+
+
+
+            delimiter = numbers.substring(delimiterIndex, delimiterIndexEnd);
+            noDelimiter = numbers.substring(numbers.indexOf("\n") + 1);
+
         }
 
         return add(noDelimiter, delimiter);
-
-
     }
-
 
     private static int add(String numbers, String delimiter) {
         int returnValue = 0;
@@ -34,8 +37,6 @@ public class Calculator {
                     negative.add(nums);
 
                 } else if (nums <= 1000) returnValue += nums;
-
-
             }
 
         }

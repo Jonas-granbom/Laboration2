@@ -26,6 +26,6 @@ class CalculatorTest {
     void specificDelimiterSeparatesNumbers() {
         Calculator calc = new Calculator();
 
-        assertEquals(8 + 4 + 2, calc.add("//;n -8; -4;10000"));
+        assertEquals(7, calc.add("//~~~\n1~~~3~~~3"));
     }
 }
