@@ -32,8 +32,10 @@ public class Calculator {
                 int nums = Integer.parseInt(splitNumber.trim());
                 if (nums < 0) {
                     negative.add(nums);
-                }
-                returnValue += nums;
+
+                } else if (nums <= 1000) returnValue += nums;
+
+
             }
 
         }
