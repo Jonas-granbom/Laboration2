@@ -14,9 +14,29 @@ public class Calculator {
             int delimiterIndexEnd = numbers.indexOf("\n");
 
 
-
             delimiter = numbers.substring(delimiterIndex, delimiterIndexEnd);
+            String[] newDelimiters = delimiter.split("]");
+
+            numbers = numbers.replace("//", "");
+            numbers = numbers.replace(delimiter, "");
+            numbers = numbers.replace("\n", ",");
+
+
+            for (int i = 0; i < newDelimiters.length; i++) {
+
+                newDelimiters[i] = newDelimiters[i].replace("[", "");
+
+            }
+
+
+            for (String newDelimiter : newDelimiters) {
+                numbers = numbers.replace(newDelimiter, ",");
+
+            }
+
+
             noDelimiter = numbers.substring(numbers.indexOf("\n") + 1);
+            delimiter = ",";
 
         }
 
