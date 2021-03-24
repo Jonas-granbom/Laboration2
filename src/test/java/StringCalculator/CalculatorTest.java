@@ -26,6 +26,6 @@ class CalculatorTest {
     void specificDelimiterSeparatesNumbers() {
         Calculator calc = new Calculator();
 
-        assertEquals(7, calc.add("//[~~][^]\n1~3^3"));
+        assertEquals(7, calc.add("//[~~~][^]\n1~~~3^3"));
     }
 }
