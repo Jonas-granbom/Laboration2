@@ -5,7 +5,6 @@ import org.mockito.Mockito;
 
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -42,11 +41,12 @@ class EmployeeManagerTest {
 
     }
 
+
     @Test
     void runtimeExceptionTest() {
 
         EmployeeRepository employeeRepository = mock(EmployeeRepository.class);
-        Employee testEmployee = new Employee("d", 4);
+        Employee testEmployee = new Employee("4", 3500);
         when(employeeRepository.findAll()).thenReturn(List.of(testEmployee,
                 new Employee("1", 5000),
                 new Employee("2", 6000),
@@ -71,11 +71,6 @@ class EmployeeManagerTest {
         EmployeeManager emp = new EmployeeManager(employeeRepository, bankService);
         assertEquals(2, emp.payEmployees());
     }
-
-
-
-
-
 
 
 }
